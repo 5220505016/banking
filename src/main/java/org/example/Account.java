@@ -7,6 +7,6 @@ public interface Account {
     void withdraw(double amount) throws InsufficientBalanceException;
     void showBalance();
     String getAccountNumber();
-    double getBalance();
+
 
 }
