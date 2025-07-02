@@ -4,6 +4,8 @@ package org.example;
 public class DepositAccount implements Account {
     private static int counter = 2000;
     private String accountNumber;
+
+
     private double balance;
     private double interestRate = 0.3;
 
