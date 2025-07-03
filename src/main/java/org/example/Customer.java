@@ -5,9 +5,9 @@ import java.util.List;
 
 
 public class Customer {
-     private int customerId;
-     private String fullName;
-     private List<Account> accounts;
+     private final int customerId;
+     private final String fullName;
+     private final List<Account> accounts;
 
      public Customer(int customerId, String fullName){
         this.customerId = customerId;
@@ -31,19 +31,11 @@ public class Customer {
          }
          return null;
      }
-     public void showCustomerInfo(){
-         System.out.println("Müşteri ID: " + customerId + "Ad Soyad: " +fullName);
-     }
 
-        public int getCustomerID(){
+    public int getCustomerID(){
          return customerId;
         }
-        public String getFullName(){
-         return fullName;
-        }
-        public List<Account> getAccounts(){
-         return accounts;
-        }
+
 
 
 

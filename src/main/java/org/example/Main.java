@@ -4,18 +4,18 @@ package org.example;
 import java.util.*;
 
 public class Main {
-    private static List<Customer> customers = new ArrayList<>();
-    private static Scanner scanner = new Scanner(System.in);
+    private static final List<Customer> customers = new ArrayList<>();
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args){
         Map<Integer, Runnable> menuMap = new HashMap<>();
-            menuMap.put(1, () -> addCustomer());
-            menuMap.put(2, () -> openAccount());
-            menuMap.put(3, () -> depositMoney());
-            menuMap.put(4, () -> withdrawMoney());
-            menuMap.put(5, () -> showBalance());
-            menuMap.put(6, () -> listAccount());
-            menuMap.put(7, () -> applyInterest());
+            menuMap.put(1, Main::addCustomer);
+            menuMap.put(2, Main::openAccount);
+            menuMap.put(3, Main::depositMoney);
+            menuMap.put(4, Main::withdrawMoney);
+            menuMap.put(5, Main::showBalance);
+            menuMap.put(6, Main::listAccount);
+            menuMap.put(7, Main::applyInterest);
 
 
         while(true){
@@ -61,7 +61,6 @@ public class Main {
         System.out.print("Hesap Türü (1-Vadesiz, 2-Vadeli): ");
         int type = scanner.nextInt();
         scanner.nextLine();
-        double balance = 0;
 
         if (type == 1){
             Account acc = new CheckingAccount(0);

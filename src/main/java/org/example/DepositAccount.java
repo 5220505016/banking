@@ -3,16 +3,13 @@ package org.example;
 
 public class DepositAccount implements Account {
     private static int counter = 2000;
-    private String accountNumber;
-
-
+    private final String accountNumber;
     private double balance;
-    private double interestRate = 0.3;
+    private final double interestRate = 0.3;
 
     public DepositAccount(double balance) {
         this.accountNumber = "D" + (++counter);
         this.balance = balance;
-        this.interestRate = 0.3;
     }
 
 
@@ -57,8 +54,5 @@ public class DepositAccount implements Account {
         return accountNumber;
     }
 
-    @Override
-    public double getBalance() {
-        return balance;
-    }
+
 }

@@ -3,7 +3,7 @@ package org.example;
 
 public class CheckingAccount implements Account {
     private static int counter = 1000;
-    private String accountNumber;
+    private final String accountNumber;
     private double balance;
 
     public CheckingAccount(double balance) {
@@ -44,8 +44,4 @@ public class CheckingAccount implements Account {
         return accountNumber;
     }
 
-    @Override
-    public double getBalance() {
-        return balance;
-    }
 }
